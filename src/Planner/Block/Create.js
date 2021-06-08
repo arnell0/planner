@@ -102,7 +102,7 @@ export default function Create(props) {
 
           <TextField
             select
-            label="Prioritet"
+            label="Skapare"
             
             name="author"
             value={item.author}

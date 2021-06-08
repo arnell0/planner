@@ -1,5 +1,7 @@
 # planner
 
+A weekly drag and drop planner built for another project.
+
 Demo - https://arnell0.github.io/planner
 
 Data hosted @ Supabase.io - GraphQL
@@ -9,10 +11,8 @@ Published with Github pages.
 ## Todo
 
 -
-- publish to github pages
+- <s>publish to github pages</s>
 - create small gif for portfolio
 - add link to portfolio
 
 <!-- https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f -->
-
-[link](link.com)
