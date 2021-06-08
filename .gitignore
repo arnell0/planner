@@ -13,7 +13,7 @@
 
 # misc
 .env
-.sh
+./git-push.sh
 .DS_Store
 .env.local
 .env.development.local
