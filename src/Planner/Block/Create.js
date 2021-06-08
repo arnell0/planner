@@ -11,7 +11,7 @@ const weekdays = ['Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Sön
 
 export default function Create(props) {
   const [open, setOpen] = useState(false);
-  const [item, setItem] = useState({title: "", content: "", author: "Martin J", prio: 1, index: 100, group: props.group, sign: ''})
+  const [item, setItem] = useState({title: "", content: "", author: "", prio: 1, index: 100, group: props.group, sign: '', done:false})
 
   const square = color => <span style={{backgroundColor:color, width:"24px", height:"24px", marginRight:"10px"}}>&nbsp;</span>
 
@@ -20,7 +20,7 @@ export default function Create(props) {
   };
   const handleClose = () => {
     setOpen(false);
-    setItem({title: "", content: "", author: "", prio: 1, index: 100, group: 0})
+    setItem({title: "", content: "", author: "", prio: 1, index: 100, group: props.group, sign: '', done:false})
   };
   const handleSave = () => {
     props.create(item)
@@ -98,6 +98,19 @@ export default function Create(props) {
             helperText="Välj en dag när den ska utföras."
           >
             {weekdays.map((day, index) => <MenuItem key={index} value={index}>{day}</MenuItem>)}
+          </TextField>
+
+          <TextField
+            select
+            label="Prioritet"
+            
+            name="author"
+            value={item.author}
+            onChange={handleChange}
+            helperText="Välj vem som skapar denna uppgift."
+            style={{margin: "5px 0"}}
+          >
+            {['Martin J', 'Adams S'].map((el, i) => <MenuItem key={i} value={el}>{el}</MenuItem>)}
           </TextField>
           </form>
         </DialogContent>
